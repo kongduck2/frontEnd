@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>HyperText(HyperLink)</title>
+    <style> /* html 태그들은 컨텐츠의 의미와 구조를 표시 , html 문서의 모양(디자인 요소)은 style 여러 속성으로 설정*/
+    html{ /* html 태그에 적용되는 디자인 속성 */
+        margin:0px; padding:0px;
+    }
+    body{ /* body 태그에 적용되는 디자인 속성 */
+        margin:0px; padding:0px;
+    }
+
+    </style>
 </head>
 <body>
     <!--웹문서 사이의 연결(링크)는 a(anchor) 태그-->
@@ -18,15 +27,17 @@
     <hr>
     <!--이미지 포함 시키기 : img 태그,종료 태그 없음.-->
     <img src="images/kong (2).jpg"> <!-- images 폴더가 day1 폴더 아래에 있을때. 이미지 표시 안됨(X)-->
-    <img src="../images/panda.jpg"width="30%"><br>
-    <img src="../images/kong (2).jpg" width="30%"><br> <!--윈도우 크기의 30%-->
+    <img src="../images/panda.jpg"width="30%">
+    <img src="../images/kong (2).jpg" width="30%"> <!--윈도우 크기의 30%-->
+    <img src="../images/ASCII.jpg"width="50%">
+    <img src="../images/ASCII2.jpg" width="50%">
     <hr>
-    <img src="../images/ASCII.jpg"width="50%"><br>
-    <img src="../images/ASCII2.jpg" width="50%"><br>
-    <hr>
+    <!--<div>태그로 이미지를. 다른 라인에 표시-->
     <div> <img src="../images/panda.jpg"width="30%"> </div>
     <div> <img src="../images/kong (2).jpg" width="30%"> </div>
     <div> <img src="../images/ASCII.jpg"width="30%">  </div>
     <div> <img src="../images/ASCII2.jpg" width="30%">  </div>
+
+    네이버로 이동하기 <a href="https://www.naver.com"><img src="../images/cat1.jpg" width="30%"></a>
 </body>
 </html>
