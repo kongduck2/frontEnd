@@ -1,0 +1,57 @@
+ /* 태그 요소를 선택하는 선택자(selector)를 지정 */
+ td{/* 선택자 :td 태그, 모든 td태그에 적용됨 */
+    border : 1px solid gray;
+    text-align: center; 
+    /* text 정렬 : (text-align : 정렬위치) */
+   }
+   table{
+       width:70%;
+    /* 태그 요소의 외부 여백(top,bottom,left,right) */
+    margin-right: 5px;
+    margin-left: 30px;
+    /* border-spacing: 10px; 
+       border-spacing : 테이블 칸(cell)사이의 간격 설정하기 */
+    border-collapse: collapse;
+    /* boder-collapse 테이블 칸 사이 간격없애기 */
+   } 
+   th{
+    color:blue;
+    background-color:aliceblue;
+   }
+   td,th{
+       /* 태그 요소의 내부 여백(top,bottom,left,right) */
+    padding-top: 5px;
+    padding-bottom: 5px;
+   }
+   caption{ /*글꼴 크기는 기본 16px 임. 비율 : % , em */
+       font-size: 1.2em; /* 1.2em 키우기*/
+   }
+
+   /* 선택자를 class 사용해보자. class 표시 기호는 .이다 */
+   .name{ /*class = "name" 모두를 선택함*/
+       color:lightgreen;
+   } 
+   td.name{/*td 태그의 class="name"모두를 선택함*/
+       color: lightskyblue;
+   }
+   /* 참고 */
+   /* p가 div 의 자식태그일때 적용*/
+   div > p{ /* div 태그의 자식태그 p 선택  */
+    color:blue
+   }
+
+   p{ /* 모든 p태그 */ 
+       color:red
+   }
+
+   /* 추가 설명 
+   color: red,green,blue 3가지 색상을 0~255 사이의 값으로 각각 혼합하여 만듬.
+            white: 255,255,255(#FFFFFF) black: 0,0,0(#000000)
+        :자주 사용하는 색은 이름이 있다.
+        :#oooooo -> oo하나가 16진수값임.
+    table 에서 border-spacing : 테이블 칸(cell)사이의 간격
+   boder-collapse 테이블 칸 간격없애기
+   */
+
+
+

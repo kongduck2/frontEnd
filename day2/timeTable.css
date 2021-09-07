@@ -1,0 +1,32 @@
+/* 작성자 : 유일상 */
+table{
+    margin:auto; /*테이블 여백을 자동으로 설정(화면 중앙 기준) */
+    border-collapse:collapse;
+}
+th{
+    color:rgb(0, 110, 255);
+}
+th,td{
+    height: 30px;
+    width: 70px;
+    border: 1px solid black;
+    text-align: center; 
+}
+.kor{
+   background-color: lightblue;
+}
+.eng{
+    background-color: lightgreen;
+}
+.math{
+    background-color: lightseagreen;
+}
+.sci{
+    background-color: darkorange;
+}
+.phy{
+    background-color: cornflowerblue;
+}
+.music{
+    background-color:  turquoise;
+}
