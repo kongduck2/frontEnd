@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>day3-1 css flexbox 연습1 </title>
+    <style>
+        .container{
+            background-color: dodgerblue;
+            display: flex; 
+            flex-wrap: wrap;/* wrap : 줄넘김 처리 설정
+             (컨테이너에서 아이템들을 담을공간이 없을때 줄바꿈 결정)*/
+            justify-content: space-between; /*메인축 방향으로 아이템들을 정렬*/
+            flex-direction: column; /*배치 방향설정*/
+        }
+        .container > div{ /* 선택자 공백은 손자들도 포함. >는 자식만 */
+            border:1px solid rgb(6, 247, 186);
+            background-color: #f1f1f1;
+            font-size: 2em;
+            padding: 10px 20px;
+            margin: 10px;
+        }
+    </style>        
+</head>
+<body> <!-- flexbox는 box 요소 태그 사용함.-->
+    <!-- div태그는 너비 기본값이 100% 브라우저 너비 100% 이다. -->
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,15 @@
+.container {
+	display: flex;
+    background-color: aqua;
+    flex-direction: column;
+	/* display: inline-flex; */
+}
+.container > div{ /*container의 자식들에 적용된다(?) ex. item...*/
+    background-color: aliceblue;
+    margin : 10px; /* 간격 */
+    width: 100px; /* 가로넓이 */
+    /* padding: 50px;  *//* 정의된 내부의 공간을 생성 */
+    font-size: 15px;/* 글씨 크기*/
+    text-align: center; /*텍스트 정렬위치 */
+    line-height: 100px;/*세로 넓이?(line은 뭐지)*/
+}
