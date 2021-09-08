@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+*{
+    font-family: 'Jua', sans-serif;
+}
+h2{
+    padding: auto;
+    margin-left: 40%;
+}
+table{
+    width: 70%;
+    margin: auto;
+    border-spacing: 20px; 
+}
+th{
+    width: 70px;
+background-color:  #4dd0e1;
+border-radius: 8px;
+padding: 10px;
+font-size: 20px;
+}
+/* 속성을 이용한 선택자 */
+input,select{
+    padding: 7px;
+    border-radius: 4px;
+}
+
+input[type=submit],input[type=reset]{
+    color: ghostwhite;
+    font-size: 20px;
+    background-color: #009faf;
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    margin-top: 35px;
+
+}
+input[type=text],input[type=password],input[type=email]{
+    width: 70%;
+}
