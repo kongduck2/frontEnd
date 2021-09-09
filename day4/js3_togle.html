@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바 스크립트 예제 #3</title>
+</head>
+<body>
+    <button onclick="bulbOn()">전구 켜기</button>
+    <img id = "myImage" alt = "light" src="../images/pic_bulboff.gif"
+     style="width: 100px; cursor: pointer;" onclick="bulbToggle()">
+    <button onclick="bulbOff()">전구 끄기</button>
+    <!-- body안에 있는 것들 순서대로 실행됨. img 태그가 script 뒤에 있으면 오류 : 변수 호이스팅 때문에 onoff가 null이됨-->
+    <p>전구를 클릭해 보세요. 현재 상태 :<em id="state">OFF</em></p>
+    <script>
+        let state = 0; 
+        const bimg = document.getElementById('myImage');
+        function bulbOn(){
+            bimg.src='../images/pic_bulbon.gif';
+            document.getElementById('state').innerHTML='ON';
+            state=1;
+        }
+        function bulbOff(){
+            bimg.src='../images/pic_bulboff.gif';
+            document.getElementById('state').innerHTML='OFF';
+            state=0;
+        }
+        function bulbToggle(){ //이벤트 핸들러 : onclick 이벤트 발생시 실행되는 함수
+            if(state==1){
+                bulbOff();
+            }else{
+                bulbOn();
+            }
+        }
+    </script>
+</body>
+</html>

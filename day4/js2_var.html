@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 예제 #2</title>
+</head>
+<body>
+    <!-- 참고 : 자바에서 {}은 명령어 블록임.(if,for,while,메소드...) -> block scope 지역변수
+
+        자바스크립트 변수 var의 문제점.
+        1.같은 변수의 이름을 중복해서 선언할 수 있다.(덮어쓰기 가능)
+        2.block scope 적용 안됨
+        ES6 버전에서 새로운 변수선언 키워드 : let, const(상수역할 + 객체 참조)
+        3.변수를 선언하지 않고도 사용할 수 있다.('use strict' 적용해서 금지 가능)
+    -->
+
+    <script>
+        //변수를 var로 선언한경우
+        'use strict' //3.엄격모드 : 선언하지 않은 변수를 사용했을때 오류 발생 시킴
+        var v1 = 123;console.log(v1);
+        var v1 = 999;console.log(v1); // 변수명 중복 O
+        if(10 > 5){
+           var v1 = 456;
+        } 
+        console.log(v1);
+        //123이 나와야 하는데 456이나옴 *자바 스크립트 var 선언은 block scope 적용 안됨
+       // temp=9989;console.log('temp =',temp); //temp 선언이 없어도 값이 나옴
+        //변수 선언시 타입이 없음.선언된 값과 다른 형식의 데이터를 대입할 수 있다.
+        var v4 =789; //789를 메모리에 저장하고 v4가 참조함.
+        console.log(v4);
+        v4='abcde'; //abcde를 메모리에 저장하고 v4가 참조함.
+        console.log(v4);
+    </script>
+    <br>
+    <script> //변수 호이스팅 : 선언된 변수를 다른 명령어(ex. consol..)들 보다 먼저 처리함
+        //변수를 let으로 선언한경우
+        let v2 = 123;console.log(v2);
+        //let v2 = 999;console.log(v2); // ERROR : 변수명 중복 X
+        if(10 > 5){
+           let v2 = 456;
+           console.log(v2);
+        } 
+        console.log(v2);
+        //123이 정상적으로 나옴. block scope 적용됨.
+    </script>
+</body>
+</html>

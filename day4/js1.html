@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 예제 #1</title>
+    <script> /*document 객체를 대상으로 출력을 실행*/
+        document.write("<h1>JavaScript</h1>");
+        document.write("자바스크립트에 대해서 알아보자.");
+    </script>
+</head>
+<body>
+    <hr>
+    <h2>welcome!! 환영합니다.</h2>
+    <script>
+    document.write('My name is 홍길동.');
+    // alert('나이를 알려주세요.');
+    /*alert : JavaScript의 대화상자(다이얼로그) (함수 다른 출력보다 먼저 실행됨)*/
+    </script>
+    <button onclick="alert('지역을 알려주세요.')">추가 정보1</button>
+    <button onclick="yourInfo()">추가 정보2</button> <!--사용자 정의 함수-->
+    <button onclick="yourInfo2()">추가 정보3</button> <!--나이 입력받기-->
+    <script>
+        function yourInfo(){ /* 사용자 정의 함수 선언하고 실행내용 작성*/
+            //alert("취미를 알려주세요."); 변수 선언:값은 undefined로 대입됨.
+            var hobby = prompt("당신의 취미는?");
+            //document.write(hobby); //기존 출력내용 clear되고 입력된 값만 출력
+            console.log(hobby);
+            document.getElementById("hobby").innerHTML= hobby;
+        }
+        function yourInfo2(){
+            var age = prompt("당신의 나이는?");
+            console.log(age);
+            document.getElementById("age").innerHTML=age;
+        }
+    </script>
+    <p>취미는 <span id ="hobby">?</span></p>
+    <p>나이는 <span id ="age">?</span></p>
+</body>
+</html>

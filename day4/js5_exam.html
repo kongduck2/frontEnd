@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>자바스크립트 예제 #5</title>
+    <style>
+        td{
+            border: 1px solid coral;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>문자열 길이</td>
+            <td id="len"></td>
+        </tr>
+        <tr>
+            <td>"am" 포함하면 인덱스 위치찾기</td>
+            <td id="indexOf"></td>
+        </tr>
+        <tr>
+            <td>"am" 포함하면 마지막"am" 인덱스 위치찾기 </td>
+            <td id="lastIndexOf"></td>
+        </tr>
+        <tr>
+            <td>문자열 추출7,11</td><td id="subs"></td>
+        </tr>
+        <tr>
+            <td>문자열 추출 11~</td><td id="subs2"></td>
+        </tr>
+    </table>
+    <button onclick="strMethod()">문자열 입력</button>
+        <!-- 요구사항 : 버튼을 클릭하면 사용자로부터 문자열을 입력받습니다. (prompt 다이얼로그)
+            입력받은 문자열로 String method 실행해서 table td 태그 안에 결과값 보여주기 -->
+<!-- 자바스크립트 파일 따로 빼기-->
+<script src="ex5.js"></script>
+</body>
+</html>
