@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 이터러블 Iterable 객체 : 여러개의 데이터를 저장하는 자료구조 예) 배열
+            for문을 이용해서 데이터를 순서대로 값을 접근(순회)
+            foreach(함수) 메소드는 for문을 대신함. 인자로 함수를 전달해야함.
+            *if,for,while 문을 지양하는 프로그래밍
+    -->
+    <p id="demo"></p><p id = "demo_each"></p><p id = "filter"></p>
+    <p id = "filter2"></p>
+    <script>
+        //결론 : 배열 객체는 유용한 메소드가 많다. 상당수 콜백함수를 인자로 사용
+        const list = ['sana','mina','nana','nayeon'];
+        let result = "<ul>";
+        list.forEach(function(value,index,array){ //콜백함수 인자는 자동으로 받게됨 value,index,array 순서 지켜서 써야함
+            // result += "<li>"+ value + "</li>"; //value변수 대신 index변수로 변경해서 실행
+            result += `<li>${index+1}: ${value}</li>`;
+        })
+        result +="<ul>";
+        document.getElementById("demo_each").innerHTML=result;
+        //filter 메소드는 조건이 참인 배열 요소만 찾아서 새로운 배열을 생성한다.
+        const numbers = [45, 4, 9, 16, 25];
+        const over18 = numbers.filter(myFunction);
+
+        document.getElementById("filter").innerHTML = over18;
+
+        function myFunction(value) { //value,index,array중에서 value 매개변수만 선언
+        return value > 18;
+        }
+
+        //문제 over10 배열(10보다 큰값)을 filter 메소드로 생성해서 출력하세요. 단 , 콜백함수를 arrow 함수로 작성해보세요.
+        
+        const over10 = numbers.filter((value) => value > 10);
+        document.getElementById("filter2").innerHTML= over10;
+        
+
+        // let text = "<ul>";
+        // for(let i=0; i<list.length;i++){
+        //     text += "<li>"+list[i] + "</li>";
+        // }
+        // text += "</ul>";
+        // document.getElementById('demo').innerHTML=text;
+    </script>
+</body>
+</html>

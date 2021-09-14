@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 자바스크립트에서 함수는 매우 중요하다. 함수도 객체
+        함수 정의할 때 매개변수 데이터 형식이 따로 없음.-->
+    <script>
+        console.log(myfunc2(20)); //함수 호이스팅 : 함수 선언문 형식으로 정의했을 때. > 권장 안함
+        // ** 함수를 리터럴 형식으로 선언.** (권장)
+        const myfunc1 = function(x){ //매개 변수 x는 객체를 포함하여 모든 타입이 가능함.
+            console.log("myfunc1 입니다.");
+            return x*11;
+        } //대입문 오른쪽은 함수 리터럴(값),왼쪽은 식별자(변수)
+
+        //위의 함수 호출 - > 식별자로 함
+        let result = myfunc1(10);
+        console.log(result);
+
+        //함수 선언문 형식
+        function myfunc2(x){ //식별자가 없을때는 함수이름으로 식별자가 선언됨.
+            console.log("myfunc2 입니다.");
+            return x*12;
+        }
+        result = myfunc2(10);
+        console.log(result);
+
+        //Function 함수를 사용하기도 함 =>권장 안함.
+        //화살표(arrow) 함수선언 : 많이 쓰이는 형태 function키워드 생략하려고 씀.
+        const myfunc3 = (x,y) => x*y; //인자를 받아서 리턴값 전달할때 사용
+        //실행할 명령이 여러개일 때는 {},return 생략 못함.
+        console.log(myfunc3(10,5));
+        
+        const myfunc4 = (x) =>{
+            console.log("myfunc4 입니다.");
+            return x*10;
+        }
+        //리턴값 없는 형식도 가능
+        const myfunc5 = (x) => alert('테스트 값:'+ x);
+        myfunc5(999);
+
+        //익명(anonymous)의 즉시 실행 함수 -> 한번만 사용되는 함수임. :그룹 연산자 기호( ) 안에 작성함.
+        console.log((
+            function(a,b){
+                console.log("익명함수 입니다");
+                return a*b;
+            }//(4,5) ()괄호는 익명함수로 호출 괄호 임 ()안에 인자값 전달.
+        )
+        );
+
+    </script>
+</body>
+</html>

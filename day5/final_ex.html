@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>final_ex 작성자 : 유일상</title>
+    <style>
+        table{
+            margin:auto; 
+            border-collapse:collapse;
+        }
+        /* tr{
+            background-color: dodgerblue;
+        } */
+        td{
+            height: 30px;
+            width: 100px;    
+            border: solid 1px black;
+            text-align: center; 
+        }
+        .t{
+            background-color: cornflowerblue;
+        }
+        .t2{
+            background-color: darkturquoise;
+        }
+    </style>
+</head>
+<body>
+    <!-- 문제 : 아래 2개배열의 값을 이용하여 화면 보기 좋은 UI를 만들어보세요-->
+
+    <div>현재시간</div>
+    <p id ="now" style="background-color: lightskyblue;"></p>
+    <table>
+        <tr id = "time"></tr>
+        <tr id = "todo"></tr>
+    </table>
+    <script>
+          setInterval(function(){ 
+        document.getElementById('now').innerHTML=Date();},);
+        const time = ['09:00','11:00','12:30','14:00','16:45']; //시간
+        const todo = ['수업','과제','점심식사','주간회의','자료조사']; //할일
+        let t ="",t2="";
+        time.forEach(function(value){
+            t+="<td class =\"t\">" + value + "</td>";
+        })
+        todo.forEach(function(value){
+            t2+="<td class =\"t2\">" + value + "</td>";
+        })
+        document.getElementById("time").innerHTML=t;
+        document.getElementById("todo").innerHTML=t2;
+
+    </script>
+</body>
+</html>
